@@ -16,6 +16,3 @@ class Application:
 
     def on_quit(self):
         self.main_win.destroy()
-
-    def something():
-        pass
