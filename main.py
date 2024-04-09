@@ -16,6 +16,37 @@ if __name__ == '__main__':
 
     app = Application()
     app.exec()
+#####from class main windows
+        # rect = 0.1, 0.1, 0.8, 0.8
+        # t = np.arange(0.01, 10.0, 0.01)
+        # scale = 1.10
+
+        # fig = plt.Figure()
+
+        # canvas = FigureCanvasTkAgg(fig, self.graph_frame)
+
+        # ax1 = fig.add_axes(rect)
+        # ax1.plot(t, np.exp(t), 'b-')  # Put your speed/power plot here
+        # ax1.set_xlabel('Speed (mph)', color='b')
+        # ax1.set_ylabel('Power', color='b')
+
+        # ax2 = fig.add_axes(rect, frameon=False)
+        # ax2.yaxis.tick_right()
+        # ax2.yaxis.set_label_position('right')
+        # ax2.xaxis.tick_top()
+        # ax2.xaxis.set_label_position('top')
+
+        # ax2.plot(t, np.sin(2 * np.pi * t), 'r-')  # Put your speed/rotation plot here
+        # ax2.set_xlabel('Speed (kmph)', color='r')
+        # ax2.set_ylabel('Rotations', color='r')
+
+        # zp = ClassGraph()
+        # figZoom = zp.zoom_factory(ax1, base_scale=scale)
+        # figPan = zp.pan_factory(ax1)
+        # figZoom2 = zp.zoom_factory(ax2, base_scale=scale)
+        # figPan2 = zp.pan_factory(ax2)
+        # canvas._tkcanvas.pack(fill=tk.BOTH, expand=1)
+#####
 
 # print("https://fadeevlecturer.github.io/python_lectures/notebooks/visualization/matplotlib.html")
 # ---------------------------------------------
