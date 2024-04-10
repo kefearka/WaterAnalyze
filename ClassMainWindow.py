@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from ClassMenu import MainMenu
+from ClassTabs import tabs
 from ClassEvent import xevents
 
 
@@ -12,7 +13,7 @@ class MainWindow(tk.Tk):
         self.root_handle = super()
         self.root_handle.__init__()
 
-        self.configure()
+        self.set_params()
 
         self.mmenu = MainMenu(self)
         self.mmenu.set_default()
@@ -34,7 +35,7 @@ class MainWindow(tk.Tk):
 
         self.notebook.pack(fill='both', expand=True)
 
-    def configure(self, _title="Анализ воды", _window_params="650x650+450+250") -> None:
+    def set_params(self, _title="Анализ воды", _window_params="650x650+450+250") -> None:
         self.rowconfigure(0, weight=1)
         self.columnconfigure(0, weight=1)
         self.title(_title)
