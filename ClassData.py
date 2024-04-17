@@ -4,10 +4,13 @@ class DataTransfer():
     pass
 
 class FileConnector():
-    def __init__(self, path) -> None:
-        self.file_path = path
 
-    def get(self) -> object:
+    def __init__(self) -> None:
+        self.file_path = None
+        self.dataframe = None
+
+    def get(self,path) -> object:
+        self.file_path = path
         self.dataframe = pd.read_excel(self.file_path)
         return self.dataframe
 
