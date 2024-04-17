@@ -1,7 +1,6 @@
 import pandas as pd
 
 class DataTransfer():
-    
     pass
 
 class FileConnector():
@@ -10,6 +9,7 @@ class FileConnector():
 
     def get(self) -> object:
         self.dataframe = pd.read_excel(self.file_path)
+        return self.dataframe
 
 class DBConnector():
     pass

@@ -1,4 +1,5 @@
 from tkinter import ttk
+# ----------------------------
 from ClassEvent import xevents
 
 class Tabs():
@@ -9,24 +10,26 @@ class Tabs():
         xevents.add_event("Tab add", self.add)
         xevents.add_event("Tab del", self.delete)
         
-        self.init_tab()
-    
-    def init_tab(self):
         self.notebook = ttk.Notebook(self.main_window_handle)
-    
-    def add(self, tab_name):
-        self._frame = ttk.Frame(self.notebook)
-        self._frame.rowconfigure(0, weight=1)
-        self._frame.columnconfigure(0, weight=1)
-        self._frame.pack(fill='both', expand=True)
+        self.ntabs = 0
+        self.tabs = []
         
-        self.notebook.add(self._frame, text=tab_name)
+    def add(self, tab_name):
+        _frame = ttk.Frame(self.notebook)
+        _frame.rowconfigure(0, weight=1)
+        _frame.columnconfigure(0, weight=1)
+        _frame.pack(fill='both', expand=True)
+        
+        self.notebook.add(_frame, text=tab_name)
         self.notebook.pack(fill='both', expand=True)
 
-        return 'Вкладка ' + tab_name + ' добавлена'
+        self.ntabs += 1
+        self.tabs.append({self.ntabs, tab_name, _frame})
 
-    def delete(self):
-        self.notebook.forget(self.notebook.select())
+        return 'Вкладка ' + tab_name + ' добавлена'
     
-    def place(self):
+    def place(self, index, source, object):
+        pass
+
+    def delete(self, target):
         pass

@@ -1,9 +1,7 @@
 from ClassEvent import xevents
 from ClassMainWindow import MainWindow
 
-
 class Application:
-
     
     main_win = None
 

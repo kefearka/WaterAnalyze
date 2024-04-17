@@ -1,4 +1,5 @@
 import tkinter as tk
+# ----------------------------
 from ClassEvent import xevents
 
 class MainMenu(tk.Menu):
@@ -12,15 +13,15 @@ class MainMenu(tk.Menu):
         self.set_default()
 
     def set_default(self):
-        self.mainmenu = tk.Menu(self, tearoff=0.1, borderwidth=1)
+        self.mainmenu = tk.Menu(self)
         self.parent.config(menu=self.mainmenu)
 
-        filemenu = tk.Menu(self.mainmenu, tearoff=0, borderwidth=1)
+        filemenu = tk.Menu(self.mainmenu, tearoff=False)
         filemenu.add_command(label="Открыть файл с данными")
         filemenu.add_command(label="Подключиться к базе")
         filemenu.add_command(label="Выход", command=lambda: xevents.call_event("Application quit"))
 
-        helpmenu = tk.Menu(self.mainmenu, tearoff=0.1, borderwidth=1)
+        helpmenu = tk.Menu(self.mainmenu, tearoff=False)
         helpmenu.add_command(label="Помощь")
         helpmenu.add_command(label="О программе")
 
