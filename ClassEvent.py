@@ -1,15 +1,18 @@
 class XEvent:
 
-    def __init__(self, dbg) -> None:
+    def __init__(self) -> None:
         class _events_list:
             def __init__(self) -> None:
                 self.name = ""
                 self.function = 0
 
         self._events_list = []
-        self.debug = dbg
+        self.debug = 0
 
-    def show_info(self, text):
+    def logging(self, level) -> None:
+        self.debug = level
+
+    def show_info(self, text) -> None:
         if(self.debug):
             print(f'{text}')
 
@@ -58,7 +61,8 @@ class XEvent:
             result.append(_ev[0])
         return result
 
-xevents = XEvent(1)
+xevents = XEvent()
+xevents.logging(0)
 
 
 # class old_Event():

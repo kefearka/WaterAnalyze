@@ -1,5 +1,10 @@
+from ClassData import FileConnector, DBConnector, DataTransfer
 from ClassEvent import xevents
+from ClassGraph import Graph
 from ClassMainWindow import MainWindow
+from ClassMenu import MainMenu
+from ClassTable import Table
+from ClassTabs import Tabs
 
 class Application:
     

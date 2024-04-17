@@ -1,6 +1,6 @@
 # ZOOM
 
-class ClassGraph:
+class Graph:
     def __init__(self):
         self.press = None
         self.cur_xlim = None
