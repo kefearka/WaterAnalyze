@@ -5,7 +5,7 @@ class MainMenu(tk.Menu):
     def __init__(self, _parent):
         super().__init__()
         self.parent = _parent
-        self.mainmenu = 0
+        self.mainmenu = None
 
         self.set_default()
 

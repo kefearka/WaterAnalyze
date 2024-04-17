@@ -45,18 +45,18 @@ class ClassGraph:
         return zoom
 
     def pan_factory(self, ax):
-        def onPress(event):
+        def on_press(event):
             if event.inaxes != ax: return
             self.cur_xlim = ax.get_xlim()
             self.cur_ylim = ax.get_ylim()
             self.press = self.x0, self.y0, event.xdata, event.ydata
             self.x0, self.y0, self.xpress, self.ypress = self.press
 
-        def onRelease(event):
+        def on_release(event):
             self.press = None
             ax.figure.canvas.draw()
 
-        def onMotion(event):
+        def on_motion(event):
             if self.press is None: return
             if event.inaxes != ax: return
             dx = event.xdata - self.xpress
@@ -71,9 +71,9 @@ class ClassGraph:
         fig = ax.get_figure() # get the figure of interest
 
         # attach the call back
-        fig.canvas.mpl_connect('button_press_event',onPress)
-        fig.canvas.mpl_connect('button_release_event',onRelease)
-        fig.canvas.mpl_connect('motion_notify_event',onMotion)
+        fig.canvas.mpl_connect('button_press_event',on_press)
+        fig.canvas.mpl_connect('button_release_event',on_release)
+        fig.canvas.mpl_connect('motion_notify_event',on_motion)
 
         #return the function
-        return onMotion
+        return on_motion
