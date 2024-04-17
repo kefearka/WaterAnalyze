@@ -4,6 +4,7 @@ from ClassEvent import xevents
 
 class Table():
     def __make_events():
+        
         pass
     
     def __init__(self, dataframe=None) -> None:

@@ -58,7 +58,7 @@ class XEvent:
             result.append(_ev[0])
         return result
 
-xevents = XEvent(0)
+xevents = XEvent(1)
 
 
 # class old_Event():
@@ -169,22 +169,14 @@ xevents = XEvent(0)
 #         return -1
 
 #     '''Старый метод, учитывающий количество аргументов'''
-#     # def add_event(self, event_name, target_function, target_function_args_num) -> object:
-#     #     if(self.find_event(event_name) == -1):
-#     #         self._events_list.append([event_name, target_function, target_function_args_num])
-#     #         print(f"XEvent SUCCSESS: The event '{event_name}' was successfully added")
-#     #     else:
-#     #         print(f"XEvent Warning: The event '{event_name}' is already created")
-#     #     return self
-    
-#     def add_event(self, event_name, target_function) -> object:
+#     def add_event(self, event_name, target_function, target_function_args_num) -> object:
 #         if(self.find_event(event_name) == -1):
-#             self._events_list.append([event_name, target_function])
-#             self.show_info(f"XEvent SUCCSESS: The event '{event_name}' was successfully added")
+#             self._events_list.append([event_name, target_function, target_function_args_num])
+#             print(f"XEvent SUCCSESS: The event '{event_name}' was successfully added")
 #         else:
-#             self.show_info(f"XEvent Warning: The event '{event_name}' is already created")
+#             print(f"XEvent Warning: The event '{event_name}' is already created")
 #         return self
-    
+       
 #     def del_event(self, event_name) -> object:
 #         event_to_delete = self.find_event(event_name)
 #         if(event_to_delete == -1):
@@ -198,33 +190,20 @@ xevents = XEvent(0)
 #         return self
     
 #     '''Старый метод, учитывающий количество аргументов'''
-#     # def call_event(self, event_name, *target_function_args) -> object:
-#     #     event_to_call = self.find_event(event_name)
-#     #     if(event_to_call == -1):
-#     #         print(f"XEvent ERROR: The event '{event_name}' can't be called, it is not in the event list")
-#     #     else:
-#     #         if(self._events_list[event_to_call][2] != len(target_function_args)):
-#     #             print(f"XEvent ERROR: Incorrect number of arguments for '{event_name}' event")
-#     #         else:
-#     #             try:
-#     #                 self._events_list[event_to_call][1](*target_function_args)
-#     #                 print(f"XEvent SUCCSESS: The event '{event_name}' called successfully")
-#     #             except:
-#     #                 print(f"XEvent ERROR: Unknown error when calling '{event_name}'")
-#     #     return self
-
-#     def call_event(self, event_name, *target_function_args):
-#         result = None
+#     def call_event(self, event_name, *target_function_args) -> object:
 #         event_to_call = self.find_event(event_name)
 #         if(event_to_call == -1):
-#             self.show_info(f"XEvent ERROR: The event '{event_name}' can't be called, it is not in the event list")
+#             print(f"XEvent ERROR: The event '{event_name}' can't be called, it is not in the event list")
 #         else:
-#             try:
-#                 result = self._events_list[event_to_call][1](*target_function_args)
-#                 self.show_info(f"XEvent SUCCSESS: The event '{event_name}' called successfully")
-#             except:
-#                 self.show_info(f"XEvent ERROR: Unknown error when calling '{event_name}'")
-#         return result
+#             if(self._events_list[event_to_call][2] != len(target_function_args)):
+#                 print(f"XEvent ERROR: Incorrect number of arguments for '{event_name}' event")
+#             else:
+#                 try:
+#                     self._events_list[event_to_call][1](*target_function_args)
+#                     print(f"XEvent SUCCSESS: The event '{event_name}' called successfully")
+#                 except:
+#                     print(f"XEvent ERROR: Unknown error when calling '{event_name}'")
+#         return self
     
 #     def list_events(self) -> list:
 #         result = []

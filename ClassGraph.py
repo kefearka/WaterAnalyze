@@ -41,7 +41,6 @@ class ClassGraph:
 
         fig = ax.get_figure()
         fig.canvas.mpl_connect('scroll_event', zoom)
-
         return zoom
 
     def pan_factory(self, ax):

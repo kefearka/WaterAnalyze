@@ -3,10 +3,12 @@ from ClassEvent import xevents
 
 class MainMenu(tk.Menu):
     def __init__(self, _parent):
+        
         super().__init__()
         self.parent = _parent
-        self.mainmenu = None
 
+        self.mainmenu = None
+        
         self.set_default()
 
     def set_default(self):

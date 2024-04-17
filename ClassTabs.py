@@ -6,10 +6,10 @@ class Tabs():
     def __init__(self, _parent_window) -> None:
         self.main_window_handle = _parent_window
 
-        self.init_tab()
-
         xevents.add_event("Tab add", self.add)
         xevents.add_event("Tab del", self.delete)
+        
+        self.init_tab()
     
     def init_tab(self):
         self.notebook = ttk.Notebook(self.main_window_handle)
