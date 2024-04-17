@@ -32,9 +32,6 @@ class MainWindow(tk.Tk):
         self.geometry(_window_params)
         self.protocol('WM_DELETE_WINDOW', self.exit)
 
-    # def open_file(self, path):
-    #     FileConnector(path).get()
-
     def exit(self):
         self.destroy()
 
