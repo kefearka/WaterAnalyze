@@ -23,6 +23,8 @@ class Tabs():
         self.notebook.add(self._frame, text=tab_name)
         self.notebook.pack(fill='both', expand=True)
 
+        return 'Вкладка ' + tab_name + ' добавлена'
+
     def delete(self):
         self.notebook.forget(self.notebook.select())
     

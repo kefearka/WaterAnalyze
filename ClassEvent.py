@@ -145,17 +145,18 @@ class XEvent:
     #                 print(f"XEvent ERROR: Unknown error when calling '{event_name}'")
     #     return self
 
-    def call_event(self, event_name, *target_function_args) -> object:
+    def call_event(self, event_name, *target_function_args):
+        result = None
         event_to_call = self.find_event(event_name)
         if(event_to_call == -1):
             print(f"XEvent ERROR: The event '{event_name}' can't be called, it is not in the event list")
         else:
             try:
-                self._events_list[event_to_call][1](*target_function_args)
+                result = self._events_list[event_to_call][1](*target_function_args)
                 print(f"XEvent SUCCSESS: The event '{event_name}' called successfully")
             except:
                 print(f"XEvent ERROR: Unknown error when calling '{event_name}'")
-        return self
+        return result
     
     def list_events(self) -> list:
         result = []
