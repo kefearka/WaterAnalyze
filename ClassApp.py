@@ -8,11 +8,15 @@ from ClassTabs import Tabs
 
 class Application:
     
-    main_win = None
-
     def __init__(self):
-        self.__make_events()
+        self.file_connector = FileConnector()
+        self.graph = Graph()
         self.main_win = MainWindow()
+        self.menu = MainMenu(self.main_win)
+        self.table = Table()
+        self.tabs = Tabs()
+        
+        self.__make_events()
 
     def __make_events(self):
         xevents.add_event("Application run", self.exec)

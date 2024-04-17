@@ -62,7 +62,7 @@ class XEvent:
         return result
 
 xevents = XEvent()
-xevents.logging(0)
+xevents.logging(1)
 
 
 # class old_Event():
