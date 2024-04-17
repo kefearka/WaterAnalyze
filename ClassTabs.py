@@ -8,4 +8,5 @@ class ClassTabs():
     def init_tab(self):
         self.notebook = ttk.Notebook(self.main_window_handle)
     
-    def add_tab(self, )
+    def add_tab(self, tab_name):
+        pass
