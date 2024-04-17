@@ -1,6 +1,5 @@
 # ZOOM
 
-
 class ClassGraph:
     def __init__(self):
         self.press = None

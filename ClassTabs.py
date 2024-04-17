@@ -19,11 +19,12 @@ class Tabs():
         self._frame.rowconfigure(0, weight=1)
         self._frame.columnconfigure(0, weight=1)
         self._frame.pack(fill='both', expand=True)
+        
         self.notebook.add(self._frame, text=tab_name)
         self.notebook.pack(fill='both', expand=True)
 
     def delete(self):
         self.notebook.forget(self.notebook.select())
     
-    def place():
+    def place(self):
         pass

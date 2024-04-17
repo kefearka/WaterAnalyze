@@ -4,7 +4,6 @@ from ClassMenu import MainMenu
 from ClassTabs import Tabs
 from ClassEvent import xevents
 
-
 class MainWindow(tk.Tk):
 
     def __init__(self):
@@ -19,8 +18,8 @@ class MainWindow(tk.Tk):
         self.mmenu.set_default()
 
         self.tabs = Tabs(self)
-        self.tabs.add_tab("Таблица")
-        self.tabs.add_tab("График")        
+        self.tabs.add("Таблица")
+        self.tabs.add("График")        
 
     def set_params(self, _title="Анализ воды", _window_params="650x650+450+250") -> None:
         self.rowconfigure(0, weight=1)
