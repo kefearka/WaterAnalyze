@@ -13,7 +13,7 @@ class MainMenu(tk.Menu):
 
         filemenu = tk.Menu(self.mainmenu, tearoff=0, borderwidth=1)
         filemenu.add_command(label="Открыть...")
-        filemenu.add_command(label="Сохранить...")
+        filemenu.add_command(label="Сохранить...", command=lambda: xevents.call_event("Tab del"))
         filemenu.add_command(label="Выход", command=lambda: xevents.call_event("Application quit"))
         # filemenu.add_command(label="Выход", command=self.parent.exit)
 

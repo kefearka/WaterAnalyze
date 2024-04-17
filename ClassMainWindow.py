@@ -15,27 +15,12 @@ class MainWindow(tk.Tk):
 
         self.set_params()
 
-        self.tabs = Tabs(self)
-
         self.mmenu = MainMenu(self)
         self.mmenu.set_default()
 
-        self.notebook = ttk.Notebook(self)
-
-        self.table_frame = ttk.Frame(self.notebook)
-        self.table_frame.rowconfigure(0, weight=1)
-        self.table_frame.columnconfigure(0, weight=1)
-        self.table_frame.pack(fill='both', expand=True)
-
-        self.graph_frame = ttk.Frame(self.notebook)
-        self.graph_frame.rowconfigure(0, weight=1)
-        self.graph_frame.columnconfigure(0, weight=1)
-        self.graph_frame.pack(fill='both', expand=True)
-
-        self.notebook.add(self.table_frame, text="Таблица")
-        self.notebook.add(self.graph_frame, text="График")
-
-        self.notebook.pack(fill='both', expand=True)
+        self.tabs = Tabs(self)
+        self.tabs.add_tab("Таблица")
+        self.tabs.add_tab("График")        
 
     def set_params(self, _title="Анализ воды", _window_params="650x650+450+250") -> None:
         self.rowconfigure(0, weight=1)
