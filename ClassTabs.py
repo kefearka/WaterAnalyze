@@ -1,6 +1,6 @@
 from tkinter import ttk
 
-class ClassTabs():
+class Tabs():
     
     def __init__(self, _parent_window) -> None:
         self.main_window_handle = _parent_window

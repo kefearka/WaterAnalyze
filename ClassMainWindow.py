@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from ClassMenu import MainMenu
-from ClassTabs import tabs
+from ClassTabs import Tabs
 from ClassEvent import xevents
 
 
@@ -14,6 +14,8 @@ class MainWindow(tk.Tk):
         self.root_handle.__init__()
 
         self.set_params()
+
+        self.tabs = Tabs(self)
 
         self.mmenu = MainMenu(self)
         self.mmenu.set_default()
