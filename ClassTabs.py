@@ -8,8 +8,8 @@ class Tabs():
 
         self.init_tab()
 
-        xevents.add_event("Tab add", self.add, 1)
-        xevents.add_event("Tab del", self.delete, 0)
+        xevents.add_event("Tab add", self.add)
+        xevents.add_event("Tab del", self.delete)
     
     def init_tab(self):
         self.notebook = ttk.Notebook(self.main_window_handle)

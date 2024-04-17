@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter import ttk
 from ClassMenu import MainMenu
 from ClassTabs import Tabs
 from ClassEvent import xevents

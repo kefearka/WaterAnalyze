@@ -11,8 +11,8 @@ class Application:
         self.main_win = MainWindow()
 
     def __make_events(self):
-        xevents.add_event("Application run", self.exec, 0)
-        xevents.add_event("Application quit", self.on_quit, 0)
+        xevents.add_event("Application run", self.exec)
+        xevents.add_event("Application quit", self.on_quit)
 
     def exec(self):
         self.main_win.run()
