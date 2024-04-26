@@ -1,22 +1,14 @@
-from ClassData import FileConnector, DBConnector, DataTransfer
+# ----------------------------
 from ClassEvent import xevents
-from ClassGraph import Graph
 from ClassMainWindow import MainWindow
-from ClassMenu import MainMenu
-from ClassTable import Table
-from ClassTabs import Tabs
 
 class Application:
     
+    main_win = None
+
     def __init__(self):
-        self.file_connector = FileConnector()
-        self.graph = Graph()
-        self.main_win = MainWindow()
-        self.menu = MainMenu(self.main_win)
-        self.table = Table()
-        self.tabs = Tabs()
-        
         self.__make_events()
+        self.main_win = MainWindow()
 
     def __make_events(self):
         xevents.add_event("Application run", self.exec)

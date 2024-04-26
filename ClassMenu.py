@@ -7,9 +7,8 @@ class MainMenu(tk.Menu):
         
         super().__init__()
         self.parent = _parent
-
         self.mainmenu = None
-        
+
         self.set_default()
 
     def set_default(self):
@@ -27,3 +26,4 @@ class MainMenu(tk.Menu):
 
         self.mainmenu.add_cascade(label="Файл", menu=filemenu)
         self.mainmenu.add_cascade(label="Справка", menu=helpmenu)
+        

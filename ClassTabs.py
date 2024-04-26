@@ -3,19 +3,18 @@ from tkinter import ttk
 from ClassEvent import xevents
 
 class Tabs():
-
-    def __make_events(self) -> None:
-        xevents.add_event("Tab add", self.add)
-        xevents.add_event("Tab del", self.delete)
     
-    def __init__(self) -> None:
+    def __init__(self, _parent) -> None:
         self.main_window_handle = None
         self.ntabs = 0
         self.tabs = []
 
-    def park(self, _parent) -> None:
-        self.main_handle = _parent
-        self.notebook = ttk.Notebook(self.main_handle)
+        self.main_window_handle = _parent
+        self.notebook = ttk.Notebook(self.main_window_handle)
+
+    def __make_events(self) -> None:
+        xevents.add_event("Tab add", self.add)
+        xevents.add_event("Tab del", self.delete)
         
     def add(self, tab_name):
         _frame = ttk.Frame(self.notebook)

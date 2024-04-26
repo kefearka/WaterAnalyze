@@ -3,14 +3,15 @@ import pandas as pd
 from ClassEvent import xevents
 
 class Table():
-    def __make_events(self) -> None:
-        pass
 
-    def __init__(self) -> None:
-        self.dataframe = dataframe
+    def __init__(self, _dataframe) -> None:
+        self.dataframe = _dataframe
         self.ncols = self.dataframe.shape[0]
         self.nrows = self.dataframe.shape[1]
         self.column_names = self.dataframe.columns
+
+    def __make_events(self) -> None:
+        pass
 
     def add_row(self, index, value) -> None:
         pass
