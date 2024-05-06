@@ -9,15 +9,16 @@ class DataTransfer():
 
 class FileConnector():
 
-    def __make_events(self) -> None:
-        xevents.add_event("get data from file", self.read)
-        xevents.add_event("save data to file", self.write)
-
     def __init__(self) -> None:
         self.file_path = None
         self.dataframe = None
 
         self.__make_events()
+
+    def __make_events(self) -> None:
+        xevents.add_event("get_data_from_file", self.read)
+        xevents.add_event("save_data_to_file", self.write)
+
 
     def read(self, path, delimeter='/t') -> object:
         filename, fileext = os.path.splitext(path)

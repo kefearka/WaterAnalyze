@@ -8,19 +8,23 @@ from ClassEvent import xevents
 class MainWindow(tk.Tk):
 
     def __init__(self):
+        """ Привязка родительского класса и его инициализация """
         self.root_handle = 0
-
         self.root_handle = super()
         self.root_handle.__init__()
 
+        """ Определение стиля """
         self.style = ttk.Style()
         self.style.theme_use('clam')
         
+        """ Установить параметры по умолчанию """
         self.set_params()
 
+        """ Инициализация меню и вкладок """
         self.mmenu = MainMenu(self)
-
         self.tabs = Tabs(self)
+
+        """ Добавление двух вкладок """
         self.tabs.add("Таблица")
         self.tabs.add("График")
 
